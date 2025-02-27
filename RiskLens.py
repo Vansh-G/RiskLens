@@ -73,7 +73,7 @@ stock_list = st.sidebar.text_input("Enter stock symbols separated by commas", "M
 start_date = st.sidebar.date_input("Start Date", pd.to_datetime("2020-01-01"))
 end_date = st.sidebar.date_input("End Date", pd.to_datetime("2025-01-01"))
 n_simulations = st.sidebar.slider("Number of Simulations", min_value=1000, max_value=50000, value=10000, step=1000)
-risk_free_rate = st.sidebar.number_input("Risk-Free Rate", min_value=0.0, max_value=0.1, value=0.04, step=0.01)
+risk_free_rate = st.sidebar.number_input("Risk-Free Rate (%)", min_value=0.0, max_value=10.0, value=4.0) / 100
 
 if st.sidebar.button("Run Simulation"):
     try:
